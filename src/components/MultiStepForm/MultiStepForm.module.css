@@ -1,0 +1,91 @@
+.wrapper {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6) var(--space-4);
+  background-image: var(--bg-glow);
+  transition: background-image var(--duration-slow) ease;
+}
+
+.card {
+  width: 100%;
+  max-width: var(--form-max-width);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transition:
+    background-color var(--duration-base) ease,
+    border-color var(--duration-base) ease,
+    box-shadow var(--duration-base) ease;
+}
+
+.cardHeader {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: border-color var(--duration-base) ease;
+}
+
+.cardHeaderTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  color: var(--color-accent);
+  margin: 0;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+/*
+  position: relative is still needed — during popLayout transitions, Framer Motion
+  absolutely positions the exiting step relative to this container.
+*/
+.stepContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Panels are now in normal flow — the card sizes to fit them naturally. */
+.stepPanel {
+  padding: var(--space-5);
+}
+
+/* Visually hidden aria-live region */
+.liveRegion {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  pointer-events: none;
+}
+
+/* Responsive — mobile */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .card {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+}

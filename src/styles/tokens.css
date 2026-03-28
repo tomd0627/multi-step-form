@@ -1,0 +1,159 @@
+/* ============================================
+   LIGHT MODE (default)
+   ============================================ */
+:root {
+  /* === Backgrounds === */
+  --color-bg: #faf7f2;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f5f0e8;
+  --color-surface-inset: #f0ebe0;
+
+  /* === Accent: Warm Amber/Gold (darkened for light-bg contrast) === */
+  --color-accent: #9e6008;
+  --color-accent-hover: #865005;
+  --color-accent-dim: #d4890f;
+  --color-accent-subtle: rgba(184, 114, 14, 0.10);
+  --color-accent-border: rgba(184, 114, 14, 0.28);
+
+  /* === Text: Warm browns === */
+  --color-text-primary: #2a2219;
+  --color-text-secondary: #6b5c45;
+  --color-text-muted: #7d6b55;
+  --color-text-on-accent: #ffffff;
+
+  /* === Semantic === */
+  --color-error: #c0392b;
+  --color-error-subtle: rgba(192, 57, 43, 0.08);
+  --color-error-border: rgba(192, 57, 43, 0.30);
+  --color-success: #2e7d32;
+  --color-success-subtle: rgba(46, 125, 50, 0.08);
+  --color-warning: #b45309;
+
+  /* === Borders === */
+  --color-border: rgba(42, 34, 25, 0.10);
+  --color-border-hover: rgba(42, 34, 25, 0.20);
+  --color-input-border: rgba(42, 34, 25, 0.18);
+  --color-input-focus: var(--color-accent);
+
+  /* === Password strength segments === */
+  --color-strength-weak: #c0392b;
+  --color-strength-fair: #d97706;
+  --color-strength-good: #1d6fa4;
+  --color-strength-strong: #2e7d32;
+
+  /* === Shadows (warm, light-mode appropriate) === */
+  --shadow-sm: 0 1px 2px rgba(42, 34, 25, 0.08);
+  --shadow-md: 0 4px 12px rgba(42, 34, 25, 0.10);
+  --shadow-lg: 0 10px 40px rgba(42, 34, 25, 0.14);
+  --shadow-accent: 0 4px 20px rgba(184, 114, 14, 0.22);
+
+  /* === Background glow === */
+  --bg-glow: radial-gradient(
+    ellipse 80% 50% at 50% 20%,
+    rgba(184, 114, 14, 0.06) 0%,
+    transparent 70%
+  );
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+[data-theme="dark"] {
+  /* === Backgrounds === */
+  --color-bg: #1a1714;
+  --color-surface: #252018;
+  --color-surface-alt: #2e2820;
+  --color-surface-inset: #1f1c17;
+
+  /* === Accent: full amber brightness on dark === */
+  --color-accent: #e8a838;
+  --color-accent-hover: #f0b84a;
+  --color-accent-dim: #c48820;
+  --color-accent-subtle: rgba(232, 168, 56, 0.12);
+  --color-accent-border: rgba(232, 168, 56, 0.30);
+
+  /* === Text === */
+  --color-text-primary: #f0ead8;
+  --color-text-secondary: #b8a98a;
+  --color-text-muted: #a08878;
+  --color-text-on-accent: #1a1714;
+
+  /* === Semantic === */
+  --color-error: #e06c75;
+  --color-error-subtle: rgba(224, 108, 117, 0.12);
+  --color-error-border: rgba(224, 108, 117, 0.35);
+  --color-success: #98c379;
+  --color-success-subtle: rgba(152, 195, 121, 0.12);
+  --color-warning: #e5c07b;
+
+  /* === Borders === */
+  --color-border: rgba(240, 234, 216, 0.10);
+  --color-border-hover: rgba(240, 234, 216, 0.20);
+  --color-input-border: rgba(240, 234, 216, 0.18);
+
+  /* === Password strength === */
+  --color-strength-weak: #e06c75;
+  --color-strength-fair: #e5c07b;
+  --color-strength-good: #61afef;
+  --color-strength-strong: #98c379;
+
+  /* === Shadows === */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.40);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.50);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.65);
+  --shadow-accent: 0 4px 20px rgba(232, 168, 56, 0.18);
+
+  /* === Background glow === */
+  --bg-glow: radial-gradient(
+    ellipse 80% 50% at 50% 20%,
+    rgba(232, 168, 56, 0.06) 0%,
+    transparent 70%
+  );
+}
+
+/* ============================================
+   SHARED (unchanged between modes)
+   ============================================ */
+:root {
+  /* === Typography === */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'DM Serif Display', ui-serif, Georgia, serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+
+  /* === Spacing === */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* === Border radius === */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* === Transitions === */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+
+  /* === Layout === */
+  --form-max-width: 540px;
+  --progress-height: 4px;
+}
