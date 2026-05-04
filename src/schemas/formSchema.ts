@@ -22,10 +22,10 @@ export const yourRoleSchema = z.object({
     .max(100, 'Job title must be 100 characters or fewer'),
   department: z.enum(
     ['engineering', 'design', 'product', 'marketing', 'sales', 'hr', 'finance', 'other'],
-    { errorMap: () => ({ message: 'Please select a department' }) },
+    { message: 'Please select a department' },
   ),
   companySize: z.enum(['1–10', '11–50', '51–200', '201–1,000', '1,001+'], {
-    errorMap: () => ({ message: 'Please select your company size' }),
+    message: 'Please select your company size',
   }),
 });
 

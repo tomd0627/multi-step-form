@@ -33,7 +33,7 @@ export interface StepProps {
   onGoToStep?: (index: number) => void;
   onEditFromReview?: (index: number) => void;
   stepNumber: number;
-  headingRef: RefObject<HTMLHeadingElement>;
+  headingRef: RefObject<HTMLHeadingElement | null>;
   savedData: PartialFormData;
   returnToReview?: boolean;
 }
