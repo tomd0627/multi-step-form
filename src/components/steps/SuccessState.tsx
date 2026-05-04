@@ -6,7 +6,7 @@ import styles from './Step.module.css';
 
 interface SuccessStateProps {
   onReset: () => void;
-  headingRef: RefObject<HTMLHeadingElement>;
+  headingRef: RefObject<HTMLHeadingElement | null>;
   name?: string;
 }
 
